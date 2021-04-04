@@ -1,4 +1,3 @@
-import pandas as pd
 import sys
 from flask import Flask, jsonify, request, make_response
 import numpy as np
@@ -49,8 +48,15 @@ def predict():
     
     with open('categories.txt') as f:
         labels = [i for i in f.readlines()]
-    probs = np.argmax(result,axis=1)
-    output = {'output': labels[probs.tolist()[0]]}
+    # probs = np.argmax(result,axis=1)
+    li = result[0].tolist()
+    print(li)
+    probs = li.index(max(li))
+    print(li[250])
+    print(li[120])
+    print(max(li))
+    print(probs)
+    output = {'output': labels[probs]}
     # return data
     out = json.dumps(output)
     return make_response(out)
