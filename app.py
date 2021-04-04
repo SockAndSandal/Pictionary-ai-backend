@@ -55,6 +55,8 @@ def predict():
     probs = li.index(max(li))
     li[probs] = 0
     probs = li.index(max(li))
+    li[probs] = 0
+    probs = li.index(max(li))
     print(li[250])
     print(li[120])
     print(max(li))
