@@ -51,6 +51,9 @@ def predict():
     # probs = np.argmax(result,axis=1)
     li = result[0].tolist()
     print(li)
+    result = ""
+    probs = li.index(max(li))
+    li[probs] = 0
     probs = li.index(max(li))
     print(li[250])
     print(li[120])
