@@ -12,7 +12,7 @@ from tensorflow.keras.preprocessing import image# Helper libraries
 import json
 
 # load model
-modelFileName = 'last_model.h5'
+modelFileName = 'quickdraw_mnet_model.h5'
 model = keras.models.load_model('./models/{}'.format(modelFileName))
 
 # app
