@@ -5,8 +5,7 @@ from PIL import Image
 import base64
 import re
 from io import StringIO, BytesIO
-import tensorflow as tf
-from tensorflow import keras
+import tensorflow.keras.models import load_model
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
 from tensorflow.keras.preprocessing import image# Helper libraries
 import json
